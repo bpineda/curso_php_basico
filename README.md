@@ -11,4 +11,8 @@ Utilizaremos la siguiente convención de ramas.
 
 Por ejemplo, para ver los archivos del ejercicio 03 inicial del capítulo 02, crearíamos una rama con el siguiente comando:
 
-	git checkout -b  
+	git checkout -b 02/03/inicial origin/02/03/inicial
+
+Con eso tendríamos los archivos requeridos para realiar el ejercicio. De manera análoga, si quisieramos ver los archivos finales que deberíamos tener al final del ejercicio, lo haríamos con el siguiente comando: 
+
+	git checkout -b 02/03/final origin/02/03/final
