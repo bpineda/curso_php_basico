@@ -1,3 +1,9 @@
+<?php
+$today = date('d/m/Y');
+$name = "Roberto";
+$last_name = "Gómez";
+$google_url = "http://www.google.com/"
+?>
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -24,7 +30,7 @@
     <div class="row">
       <div class="large-12 columns">
         <img src="../../../img/calatrava_400x300.jpg"/>
-        <h4>Contenido de ejemplo.</h4>
+        <h4><?= $today ?></h4>
         <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
       </div>
     </div>
@@ -38,7 +44,7 @@
               <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo...</p>
             </div>
             <div class="large-3 columns">
-              <a href="#" class="radius button right">Alguna Acción</a>
+              <a href="<?php echo $google_url; ?>" class="radius button right">Buscar en Google</a>
             </div>
           </div>
         </div>
@@ -50,7 +56,7 @@
         <hr/>
         <div class="row">
           <div class="large-6 columns">
-            <p>&copy; Copyright 2015.</p>
+            <p>&copy; Copyright <?php echo $name; ?> <?php echo $last_name; ?> 2015.</p>
           </div>
           <div class="large-6 columns">
             <ul class="inline-list right">
