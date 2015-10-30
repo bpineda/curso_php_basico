@@ -39,13 +39,13 @@ function debug($value)
           <section class="section">
             <h5 class="title"><a href="#panel1">Contact nuestra compañía</a></h5>
             <div class="content" data-slug="panel1">
-              <form action="formulario_contacto_proceso.php">
+              <form action="formulario_contacto_proceso.php" method="post">
                 <div class="row collapse">
                   <div class="large-2 columns">
                     <label class="inline">Nombre</label>
                   </div>
                   <div class="large-10 columns">
-                    <input type="text" id="yourName" placeholder="ej. Miguel de Icaza">
+                    <input type="text" id="yourName" name="name" placeholder="ej. Miguel de Icaza">
                   </div>
                 </div>
                 <div class="row collapse">
@@ -53,11 +53,11 @@ function debug($value)
                     <label class="inline"> Correo</label>
                   </div>
                   <div class="large-10 columns">
-                    <input type="text" id="yourEmail" placeholder="ej. miguel@icaza.me">
+                    <input type="text" id="yourEmail" name="email" placeholder="ej. miguel@icaza.me">
                   </div>
                 </div>
                 <label>Mensaje</label>
-                <textarea rows="4"></textarea>
+                <textarea rows="4" name="message"></textarea>
                 <button type="submit" class="radius button">Enviar</button>
               </form>
             </div>
