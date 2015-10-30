@@ -7,6 +7,23 @@ function debug($value)
   echo '</pre>';
 
 }
+
+$user_data = array();
+$user_data['name'] = 'Steve Wozniak';
+$user_data['age'] = 65;
+$user_data['company'] = 65;
+
+$famous_tech_people[] = [ 'name' => 'Steve Jobs', 
+                          'address' => '1 Infinite Loop, Cupertino, CA 95014',
+                          'email' => 'steve@apple.com',
+                          'availability' => false
+                          ];
+$famous_tech_people[] = array(  'name' => 'Bill Gates',
+                                'address' => '12012 Sunset Hills Rd., Reston, VA 20190 ',
+                                'email' => 'bill@microsoft.com',
+                                'availability' => true
+                                );
+
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -47,6 +64,35 @@ function debug($value)
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <table width="100%">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Dirección</th>
+              <th>Correo electrónico</th>
+              <th>Disponible</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><?php echo $famous_tech_people[0]['name'] ?></td>
+              <td><?php echo $famous_tech_people[0]['address'] ?></td>
+              <td><?php echo $famous_tech_people[0]['email'] ?></td>
+              <td><?php echo $famous_tech_people[0]['availability'] ? 'Si' : 'No' ?></td>
+            </tr>
+            <tr>
+              <td><?php echo $famous_tech_people[1]['name'] ?></td>
+              <td><?php echo $famous_tech_people[1]['address'] ?></td>
+              <td><?php echo $famous_tech_people[1]['email'] ?></td>
+              <td><?php echo $famous_tech_people[1]['availability'] ? 'Si' : 'No' ?></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
      
