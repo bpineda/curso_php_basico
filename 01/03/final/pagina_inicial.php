@@ -1,7 +1,6 @@
 <?php
-$today = date('d/m/Y');
-$name = "Roberto";
-$last_name = "Gómez";
+include('utilities.php');
+$name = "roberto GÓMEZ";
 $google_url = "http://www.google.com/"
 ?>
 <!doctype html>
@@ -30,7 +29,7 @@ $google_url = "http://www.google.com/"
     <div class="row">
       <div class="large-12 columns">
         <img src="../../../img/calatrava_400x300.jpg"/>
-        <h4><?= $today ?></h4>
+        <h4><?= get_todays_date() ?></h4>
         <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
       </div>
     </div>
@@ -38,10 +37,10 @@ $google_url = "http://www.google.com/"
     <div class="row">
       <div class="large-12 columns">
         <div class="panel">
-          <h4>Título</h4>
+          <h4>Valor HTTP HOST</h4>
           <div class="row">
             <div class="large-9 columns">
-              <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo...</p>
+              <p><?php debug($_SERVER['HTTP_HOST']); ?></p>
             </div>
             <div class="large-3 columns">
               <a href="<?php echo $google_url; ?>" class="radius button right">Buscar en Google</a>
@@ -56,7 +55,7 @@ $google_url = "http://www.google.com/"
         <hr/>
         <div class="row">
           <div class="large-6 columns">
-            <p>&copy; Copyright <?php echo $name; ?> <?php echo $last_name; ?> 2015.</p>
+            <p>&copy; Copyright <?php echo capitalize_first_letter($name); ?> 2015.</p>
           </div>
           <div class="large-6 columns">
             <ul class="inline-list right">
