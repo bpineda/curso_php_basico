@@ -1,6 +1,6 @@
 <?php
 include('utilities.php');
-$name = "roberto GÓMEZ";
+$name = "roberto GoMeZ";
 $google_url = "http://www.google.com/"
 ?>
 <!doctype html>
