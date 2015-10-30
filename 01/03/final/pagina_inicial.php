@@ -1,6 +1,14 @@
 <?php
+//Cargamos la librería de utilidades
 include('utilities.php');
+//Homenaje a un hombre famoso
 $name = "roberto GoMeZ";
+/*
+ * Seleccionamos google como buscador pero
+ * pudimos haber seleccionado a yahoo o a
+ * cualquier otro buscador de nuestra
+ * preferencia.
+ */
 $google_url = "http://www.google.com/"
 ?>
 <!doctype html>
