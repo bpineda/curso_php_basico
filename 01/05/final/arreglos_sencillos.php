@@ -11,7 +11,8 @@ function debug($value)
 $user_data = array();
 $user_data['name'] = 'Steve Wozniak';
 $user_data['age'] = 65;
-$user_data['company'] = 65;
+$user_data['company'] = 'Apple';
+$user_data['availability'] = true;
 
 $famous_tech_people[] = [ 'name' => 'Steve Jobs', 
                           'address' => '1 Infinite Loop, Cupertino, CA 95014',
@@ -24,6 +25,7 @@ $famous_tech_people[] = array(  'name' => 'Bill Gates',
                                 'availability' => true
                                 );
 
+$name = isset($_GET['name']) ? $_GET['name'] : 'Invitado';
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -49,7 +51,7 @@ $famous_tech_people[] = array(  'name' => 'Bill Gates',
      
     <div class="row">
       <div class="large-12 columns">
-        <h4>Arreglos</h4>
+        <h4>Hola, <?php echo $name; ?></h4>
         <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
       </div>
     </div>
@@ -60,7 +62,7 @@ $famous_tech_people[] = array(  'name' => 'Bill Gates',
           <h4>Contenido del arreglo</h4>
           <div class="row">
             <div class="large-12 columns">
-              <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo...</p>
+              <?php debug($user_data);  ?>
             </div>
           </div>
         </div>
