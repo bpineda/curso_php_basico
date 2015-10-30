@@ -1,3 +1,13 @@
+<?php
+$name = 'Gustavo Cerati'; //Nombre del usuario
+$age = 25; //Edad del usuario 
+$has_kids = true; //true en caso de tener hijos
+define('__COUNTRY', 'México'); //País de residencia
+$hourly_rate = 59.99; //Costo por hora
+$partner = new stdClass(); 
+$partner->name = 'Charly Alberti';
+$partner->age = 20;
+?>
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -35,10 +45,10 @@
           <h4>Datos del usuario</h4>
           <div class="row">
             <div class="large-4 columns">
-              Nombre
+              <b>Nombre</b>
             </div>
             <div class="large-4 columns">
-              Valor
+              <?php echo $name; ?>
             </div>
             <div class="large-4 columns">
               &nbsp;
@@ -47,22 +57,10 @@
 
           <div class="row">
             <div class="large-4 columns">
-                Edad
+                <b>Edad</b>
               </div>
               <div class="large-4 columns">
-                Valor
-              </div>
-              <div class="large-4 columns">
-                &nbsp;
-              </div>
-          </div>
-
-          <div class="row">
-            <div class="large-4 columns">
-                ¿Tiene hijos?
-              </div>
-              <div class="large-4 columns">
-                Valor
+                <?php echo $age; ?>
               </div>
               <div class="large-4 columns">
                 &nbsp;
@@ -71,10 +69,10 @@
 
           <div class="row">
             <div class="large-4 columns">
-                Edad
+                <b>¿Tiene hijos?</b>
               </div>
               <div class="large-4 columns">
-                Valor
+                <?php echo $has_kids ? 'Si' : 'No'; ?>
               </div>
               <div class="large-4 columns">
                 &nbsp;
@@ -83,10 +81,45 @@
 
           <div class="row">
             <div class="large-4 columns">
-                País
+                <b>Costo por hora</b>
               </div>
               <div class="large-4 columns">
-                Valor
+                $<?php echo $hourly_rate; ?> USD
+              </div>
+              <div class="large-4 columns">
+                &nbsp;
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="large-4 columns">
+                <b>País</b>
+              </div>
+              <div class="large-4 columns">
+                <?php echo __COUNTRY; ?>
+              </div>
+              <div class="large-4 columns">
+                &nbsp;
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="large-4 columns">
+                <b>Socio</b>
+              </div>
+              <div class="large-4 columns">
+                <?php echo $partner->name; ?>
+              </div>
+              <div class="large-4 columns">
+                &nbsp;
+              </div>
+          </div>
+          <div class="row">
+            <div class="large-4 columns">
+                <b>Edad del socio</b>
+              </div>
+              <div class="large-4 columns">
+                <?php echo $partner->age; ?>
               </div>
               <div class="large-4 columns">
                 &nbsp;
